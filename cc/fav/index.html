@@ -166,7 +166,7 @@
 		  <p class="profile-handle">멘션이 안됨.. 이 사이트가 생기게된 이유</p>
           <!-- <p class="profile-handle">@mainichi.maidcafe</p> -->
         </div>
-        <a class="profile-link" href="https://www.instagram.com/mainichi.maidcafe/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+        <a class="profile-link" href="https://www.instagram.com/mainichi.maidcafe/" target="_blank" rel="noopener noreferrer" onclick="openInstagram(event, 'mainichi.maidcafe')">프로필 보기</a>
       </article>
 
       <article class="profile-card">
@@ -223,6 +223,29 @@
   </main>
 
   <footer class="container">정적 웹페이지 무료 호스팅해주는 깃허브, 마이크로소프트 찬양합니다.</footer>
+
+  <script>
+    function openInstagram(event, username) {
+      event.preventDefault();
+
+      const webUrl = `https://www.instagram.com/${username}/`;
+      const appUrl = `instagram://user?username=${username}`;
+      let appOpened = false;
+
+      const markAppOpened = () => {
+        appOpened = true;
+      };
+
+      document.addEventListener('visibilitychange', markAppOpened, { once: true });
+      window.addEventListener('blur', markAppOpened, { once: true });
+      window.location.href = appUrl;
+
+      // 앱이 없거나 실행이 차단되면 웹 프로필로 이동합니다.
+      setTimeout(() => {
+        if (!appOpened) window.location.href = webUrl;
+      }, 1200);
+    }
+  </script>
 
 </body>
 </html>
