@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="인스타 검색 귀찮아서 만든 모음집">
-  <title>현준의 바로가기 모음</title>
+  <title>바로가기 모음</title>
   <style>
     :root {
       color-scheme: light;
@@ -61,7 +61,7 @@
 
     .profile-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
       padding-bottom: 64px;
     }
@@ -149,43 +149,44 @@
   </style>
 </head>
 <body>
-  <header class="container">
-    <!-- <p class="eyebrow">Follow along</p>-->
-    <h1>인스타 검색 귀찮아서 만든 모음집</h1>
+  <!-- <header class="container">
+    <!-- <p class="eyebrow">Follow along</p>
     <p class="intro">오전 2:01 2026-10-07</p>
-  </header>
+  </header>-->
+  <footer class="container">오전 2:25 2026-10-07</footer>
 
   <main class="container">
     <!-- 아래 카드의 이름과 URL을 실제 프로필 정보로 변경하세요. -->
-    <section class="profile-grid" aria-label="인스타그램 프로필 목록">
+    <section class="profile-grid" aria-label="목록">
+	  <article class="profile-card">
+        <div>
+          <div class="avatar" aria-hidden="true">매일</div>
+		  <h2 class="profile-name">매일</h2>
+          <!-- <h2 class="profile-name">마이니치 메이드카페</h2> -->
+		  <p class="profile-handle">멘션이 안됨.. 이 사이트가 생기게된 이유</p>
+          <!-- <p class="profile-handle">@mainichi.maidcafe</p> -->
+        </div>
+        <a class="profile-link" href="https://www.instagram.com/mainichi.maidcafe/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+      </article>
+
       <article class="profile-card">
         <div>
-          <div class="avatar" aria-hidden="true">감자</div>
+          <div class="avatar" aria-hidden="true">🥔</div>
           <h2 class="profile-name">🥔감자🥔</h2>
 		  <p class="profile-handle">평소에도 빛나지만 코스프레를 하면 눈부신 그녀</p>
           <p class="profile-handle">@yume.potato</p>
         </div>
-        <a class="profile-link" href="https://www.instagram.com/yume.potato/" target="_blank" rel="noopener noreferrer" onclick="openInstagram(event, 'yume.potato')">프로필 보기</a>
+        <a class="profile-link" href="https://www.instagram.com/yume.potato/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
       </article>
 
       <article class="profile-card">
         <div>
-          <div class="avatar" aria-hidden="true">노코</div>
+          <div class="avatar" aria-hidden="true">🍄</div>
           <h2 class="profile-name">🍄키노코🍄 누나</h2>
 		  <p class="profile-handle">독이 들어있어서 중독되기 쉽다. 난 이미 중독됨.</p>
           <p class="profile-handle">@yume.kinoko</p>
         </div>
-        <a class="profile-link" href="https://www.instagram.com/yume.kinoko/" target="_blank" rel="noopener noreferrer" onclick="openInstagram(event, 'yume.kinoko')">프로필 보기</a>
-      </article>
-	  
-	  <article class="profile-card">
-        <div>
-          <div class="avatar" aria-hidden="true">매일</div>
-          <h2 class="profile-name">마이니치 메이드카페</h2>
-		  <p class="profile-handle">멘션이 안됨.. 이 사이트가 생기게된 이유 중 하나</p>
-          <p class="profile-handle">@mainichi.maidcafe</p>
-        </div>
-        <a class="profile-link" href="https://www.instagram.com/mainichi.maidcafe/" target="_blank" rel="noopener noreferrer" onclick="openInstagram(event, 'mainichi.maidcafe')">프로필 보기</a>
+        <a class="profile-link" href="https://www.instagram.com/yume.kinoko/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
       </article>
 
       <article class="profile-card">
@@ -195,18 +196,18 @@
 		  <p class="profile-handle">머리 깨짐 주의</p>
           <p class="profile-handle">@mainichi.yochi</p>
         </div>
-        <a class="profile-link" href="https://www.instagram.com/mainichi.yochi/" target="_blank" rel="noopener noreferrer" onclick="openInstagram(event, 'mainichi.yochi')">프로필 보기</a>
+        <a class="profile-link" href="https://www.instagram.com/mainichi.yochi/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
       </article>
 	  
 	  <article class="profile-card">
         <div>
-          <div class="avatar" aria-hidden="true">우메</div>
+          <div class="avatar" aria-hidden="true">🐹</div>
           <h2 class="profile-name">우메</h2>
 		  <p class="profile-handle">매도 맛집</p>
 		  <p class="profile-handle">이분도 어째서인지 기니피그를 좋아하며 키우고있다.</p>
           <p class="profile-handle">@dreammaid_ume</p>
         </div>
-        <a class="profile-link" href="https://www.instagram.com/dreammaid_ume/" target="_blank" rel="noopener noreferrer" onclick="openInstagram(event, 'dreammaid_ume')">프로필 보기</a>
+        <a class="profile-link" href="https://www.instagram.com/dreammaid_ume/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
       </article>
 	  
 	  <article class="profile-card">
@@ -216,38 +217,12 @@
 		  <p class="profile-handle">쿄머니...</p>
           <p class="profile-handle">@kyoko_kuroheart</p>
         </div>
-        <a class="profile-link" href="https://www.instagram.com/kyoko_kuroheart/" target="_blank" rel="noopener noreferrer" onclick="openInstagram(event, 'kyoko_kuroheart')">프로필 보기</a>
+        <a class="profile-link" href="https://www.instagram.com/kyoko_kuroheart/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
       </article>
     </section>
   </main>
 
   <footer class="container">정적 웹페이지 무료 호스팅해주는 깃허브, 마이크로소프트 찬양합니다.</footer>
 
-  <script>
-    function openInstagram(event, username) {
-      event.preventDefault();
-
-      const webUrl = `https://www.instagram.com/${username}/`;
-      const appUrl = `instagram://user?username=${username}`;
-      const startTime = Date.now();
-      let appOpened = false;
-
-      const markAppOpened = () => {
-        appOpened = true;
-      };
-
-      document.addEventListener('visibilitychange', markAppOpened, { once: true });
-      window.addEventListener('blur', markAppOpened, { once: true });
-
-      window.location.href = appUrl;
-
-      // 앱 실행이 차단되거나 설치되지 않은 경우 웹 프로필로 이동합니다.
-      setTimeout(() => {
-        if (!appOpened && Date.now() - startTime < 1800) {
-          window.location.href = webUrl;
-        }
-      }, 1200);
-    }
-  </script>
 </body>
 </html>
