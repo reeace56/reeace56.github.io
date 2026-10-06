@@ -176,7 +176,7 @@
 		  <p class="profile-handle">평소에도 빛나지만 코스프레를 하면 눈부신 그녀</p>
           <p class="profile-handle">@yume.potato</p>
         </div>
-        <a class="profile-link" href="https://www.instagram.com/yume.potato/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+        <a class="profile-link" href="https://www.instagram.com/yume.potato/" target="_blank" rel="noopener noreferrer" onclick="return handlePotatoTap(event, this)">프로필 보기</a>
       </article>
 
       <article class="profile-card">
@@ -244,6 +244,29 @@
       setTimeout(() => {
         if (!appOpened) window.location.href = webUrl;
       }, 1200);
+    }
+
+    function handlePotatoTap(event, link) {
+      event.preventDefault();
+
+      const now = Date.now();
+      const isDoubleTap = link.lastTap && now - link.lastTap < 400;
+
+      clearTimeout(link.singleTapTimer);
+
+      if (isDoubleTap) {
+        link.lastTap = 0;
+        window.location.href = 'instagram://user?username=1nya0p1';
+        return false;
+      }
+
+      link.lastTap = now;
+      link.singleTapTimer = setTimeout(() => {
+        link.lastTap = 0;
+        window.location.href = link.href;
+      }, 400);
+
+      return false;
     }
   </script>
 
