@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="현준의 바로가기 모음">
+  <title>현준의 바로가기 모음</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f7f7f8;
+      --surface: #ffffff;
+      --text: #18181b;
+      --muted: #71717a;
+      --line: #e4e4e7;
+      --accent: #d62976;
+      --accent-dark: #a51d5a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 64px 0 36px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -.05em;
+    }
+
+    .intro {
+      max-width: 560px;
+      margin: 16px auto 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      padding-bottom: 64px;
+    }
+
+    .profile-card {
+      display: flex;
+      min-height: 190px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgb(24 24 27 / 5%);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgb(24 24 27 / 10%);
+    }
+
+    .avatar {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #feda75, #d62976 50%, #4f5bd5);
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .profile-name {
+      margin: 18px 0 4px;
+      font-size: 1.15rem;
+    }
+
+    .profile-handle {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .profile-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 44px;
+      margin-top: 24px;
+      border-radius: 10px;
+      background: var(--text);
+      color: #fff;
+      font-size: .92rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease;
+    }
+
+    .profile-link:hover,
+    .profile-link:focus-visible { background: var(--accent-dark); }
+
+    .profile-link:focus-visible { outline: 3px solid #f7a8c8; outline-offset: 3px; }
+
+    footer {
+      padding: 0 0 32px;
+      color: var(--muted);
+      font-size: .85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      header { padding-top: 48px; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: min(100% - 24px, 420px); }
+      header { padding: 40px 0 28px; }
+      .profile-grid { grid-template-columns: 1fr; gap: 14px; padding-bottom: 44px; }
+      .profile-card { min-height: 170px; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <!-- <p class="eyebrow">Follow along</p>-->
+    <h1>인스타 검색 귀찮아서 만든 모음집</h1>
+    <p class="intro">오전 2:01 2026-10-07</p>
+  </header>
+
+  <main class="container">
+    <!-- 아래 카드의 이름과 URL을 실제 프로필 정보로 변경하세요. -->
+    <section class="profile-grid" aria-label="인스타그램 프로필 목록">
+      <article class="profile-card">
+        <div>
+          <div class="avatar" aria-hidden="true">감자</div>
+          <h2 class="profile-name">🥔감자🥔</h2>
+		  <p class="profile-handle">평소에도 빛나지만 코스프레를 하면 눈부신 그녀</p>
+          <p class="profile-handle">@yume.potato</p>
+        </div>
+        <a class="profile-link" href="https://www.instagram.com/yume.potato/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+      </article>
+
+      <article class="profile-card">
+        <div>
+          <div class="avatar" aria-hidden="true">노코</div>
+          <h2 class="profile-name">🍄키노코🍄 누나</h2>
+		  <p class="profile-handle">독이 들어있어서 중독되기 쉽다. 난 이미 중독됨.</p>
+          <p class="profile-handle">@yume.kinoko</p>
+        </div>
+        <a class="profile-link" href="https://www.instagram.com/yume.kinoko/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+      </article>
+	  
+	  <article class="profile-card">
+        <div>
+          <div class="avatar" aria-hidden="true">매일</div>
+          <h2 class="profile-name">마이니치 메이드카페</h2>
+		  <p class="profile-handle">멘션이 안됨.. 이 사이트가 생기게된 이유 중 하나</p>
+          <p class="profile-handle">@mainichi.maidcafe</p>
+        </div>
+        <a class="profile-link" href="https://www.instagram.com/mainichi.maidcafe/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+      </article>
+
+      <article class="profile-card">
+        <div>
+          <div class="avatar" aria-hidden="true">요치</div>
+          <h2 class="profile-name">요치</h2>
+		  <p class="profile-handle">머리 깨짐 주의</p>
+          <p class="profile-handle">@mainichi.yochi</p>
+        </div>
+        <a class="profile-link" href="https://www.instagram.com/mainichi.yochi/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+      </article>
+	  
+	  <article class="profile-card">
+        <div>
+          <div class="avatar" aria-hidden="true">우메</div>
+          <h2 class="profile-name">우메</h2>
+		  <p class="profile-handle">매도 맛집</p>
+		  <p class="profile-handle">이분도 어째서인지 기니피그를 좋아하며 키우고있다.</p>
+          <p class="profile-handle">@dreammaid_ume</p>
+        </div>
+        <a class="profile-link" href="https://www.instagram.com/dreammaid_ume/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+      </article>
+	  
+	  <article class="profile-card">
+        <div>
+          <div class="avatar" aria-hidden="true">쿄코</div>
+          <h2 class="profile-name">쿄코</h2>
+		  <p class="profile-handle">쿄머니...</p>
+          <p class="profile-handle">@kyoko_kuroheart</p>
+        </div>
+        <a class="profile-link" href="https://www.instagram.com/kyoko_kuroheart/" target="_blank" rel="noopener noreferrer">프로필 보기</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="container">정적 웹페이지 무료 호스팅해주는 깃허브, 마이크로소프트 찬양합니다.</footer>
+</body>
+</html>
